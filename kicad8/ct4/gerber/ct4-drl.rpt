@@ -1,0 +1,32 @@
+Drill report for ct4.kicad_pcb
+Created on 2025-12-22T10:03:35-0500
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  Front                     front
+    L2 :  In1.Cu                    in1
+    L3 :  In2.Cu                    in2
+    L4 :  Back                      back
+
+
+Drill file 'ct4-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.700mm  0.0276"  (24 holes)
+    T2  0.750mm  0.0295"  (12 holes)
+    T3  0.762mm  0.0300"  (10 holes)
+    T4  0.800mm  0.0315"  (30 holes)
+    T5  1.000mm  0.0394"  (16 holes)
+    T6  1.400mm  0.0551"  (12 holes)
+
+    Total plated holes count 104
+
+
+Drill file 'ct4-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  1.100mm  0.0433"  (8 holes)
+    T2  2.540mm  0.1000"  (2 holes)
+    T3  3.500mm  0.1378"  (4 holes)
+
+    Total unplated holes count 14

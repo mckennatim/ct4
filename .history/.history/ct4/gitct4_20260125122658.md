@@ -1,0 +1,15 @@
+# gitct4
+## init
+* create .gitignore
+* initialize a ct4 repository and push it
+* chmod +x gitct4.sh
+
+## git bash script ../gitct4.sh
+from ct4
+
+```bash
+./gitct4.sh ##-aaaa-descr_tag
+```
+1. Copies current /esp-ct4/src files into espct4/srctags in ##-aaaa-descr_tag folder
+2. updates ct4/esp-ct4/srctags repository to include new tag directory of source code state at that commit
+   

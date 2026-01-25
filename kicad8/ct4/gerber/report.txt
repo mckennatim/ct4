@@ -1,0 +1,13 @@
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-Front.gtl'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-In1_Cu.g2'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-In2_Cu.g3'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-Back.gbl'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-F_Paste.gtp'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-B_Paste.gbp'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-F_Silkscreen.gto'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-B_Silkscreen.gbo'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-F_Mask.gts'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-B_Mask.gbs'.
+Plotted to 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-Edge_Cuts.gm1'.
+Created Gerber job file 'C:\Users\mcken\OneDrive\Tech\aiot\v1\ct4\kicad8\ct4\ct4-job.gbrjob'.
+Info: Done.
