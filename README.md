@@ -415,3 +415,6 @@ print(f"x = {x:0.8f},{x*2:0.8f}")
 
     x = 0.00000009,0.00000019
     
+
+# esp32 code for ct4
+goto [ct4.ipynb](../ct4/esp-ct4/ct4.ipynb) for specific info

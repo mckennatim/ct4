@@ -1,4 +1,10 @@
 {
     "python.defaultInterpreterPath": "C:\\Users\\mcken\\miniconda3\\envs\\ai\\python.exe",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "icon": "terminal-bash"
+        }
+    },
     "terminal.integrated.defaultProfile.windows": "Git Bash"
 }

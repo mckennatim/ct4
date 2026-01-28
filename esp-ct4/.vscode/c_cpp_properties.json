@@ -10,6 +10,7 @@
             "includePath": [
                 "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/include",
                 "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/src",
+                "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/.pio/libdeps/esp32doit-devkit-v1/PubSubClient/src",
                 "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/.pio/libdeps/esp32doit-devkit-v1/WiFiManager",
                 "C:/Users/mcken/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
                 "C:/Users/mcken/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
@@ -362,6 +363,7 @@
                 "path": [
                     "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/include",
                     "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/src",
+                    "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/.pio/libdeps/esp32doit-devkit-v1/PubSubClient/src",
                     "C:/Users/mcken/OneDrive/Tech/aiot/projects/ct projects/ct4/esp-ct4/.pio/libdeps/esp32doit-devkit-v1/WiFiManager",
                     "C:/Users/mcken/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
                     "C:/Users/mcken/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
@@ -715,6 +717,7 @@
                 "ARDUINO_ESP32_DEV",
                 "ESP32_30PIN",
                 "CORE_DEBUG_LEVEL=3",
+                "MQTT_MAX_PACKET_SIZE=1024",
                 "ESP32_ARDUINO_LIB_BUILDER",
                 "ESP_MDNS_VERSION_NUMBER=\"1.9.1\"",
                 "ESP_PLATFORM",
@@ -744,7 +747,7 @@
                 "ARDUINO=10812",
                 "ARDUINO_VARIANT=\"doitESP32devkitV1\"",
                 "ARDUINO_BOARD=\"DOIT ESP32 DEVKIT V1\"",
-                "ARDUINO_PARTITION_default",
+                "ARDUINO_PARTITION_huge_app",
                 ""
             ],
             "cStandard": "gnu17",

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "esp-ct4",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"terminal.integrated.defaultProfile.windows": "Git Bash"
+	}
+}
