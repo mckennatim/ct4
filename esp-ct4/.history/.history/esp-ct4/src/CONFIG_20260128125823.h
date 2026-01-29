@@ -2,7 +2,7 @@
 
 // --- Device Identity ---
 // These match your specific request
-#define DEV_ID          "CYURD127"
+#define DEV_ID          "CYURD"
 #define MQTT_SERVER     "sitebuilt.net"
 #define MQTT_PORT       1884
 #define MQTT_USER       "tim@sitebuilt.net"
@@ -16,10 +16,10 @@
 // Comment out to disable
 // #define USE_SENSORS 
 
+
+
 // ----Sensor Configuration ----
 // ----ct sensor
-#define USE_CT_SENSORS  // <--- Enable CT Sensor Block
-#ifdef USE_CT_SENSORS
 #include <Adafruit_ADS1X15.h>
 
 #define I2C_SDA 21  // Default for ESP32 (Original)
@@ -35,12 +35,3 @@ struct CT_Config {
   float     threshold;
   const char* name;     // Optional: Label for logging
 };
-
-// static: Prevents "multiple definition" errors when included in multiple files (Internal Linkage)
-static const CT_Config ct_sensors[4] = {
-  {0, GAIN_ONE, 0.0001875,  104.7, 0.922, 15, .3, "Heat_Pump"},
-  {1, GAIN_ONE, 0.0001875,  104.7, 0.922, 15, .3, "Solar"},
-  {2, GAIN_ONE, 0.0001875,  104.7, 0.922, 50, .3, "EV"},
-  {3, GAIN_ONE, 0.0001875,  104.7, 0.922, 15, .3, "empty"},
-};
-#endif // USE_CT_SENSORS
