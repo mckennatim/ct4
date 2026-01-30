@@ -62,43 +62,7 @@ void setup() {
     Serial.println("Setup Complete, entering loop...");
 }
 
-// Round-Robin Scheduler State
-unsigned long lastSensorRunTime = 0;
-size_t currentSensorIndex = 0;
-bool isSensorActive = false;
-// Interval between completion of one sensor and start of next
-const unsigned long SENSOR_INTERVAL = 3000; 
-
 void loop() {
-    // 1. Always run MQTT (KeepAlive & Messages)
     mqtt.loop();
-
-    // 2. Scheduled Sensor Execution
-    if (isSensorActive) {
-        // Run the active state machine
-        CTSensor* sensor = (CTSensor*)sensors[currentSensorIndex]; // Safe cast for this project
-        sensor->loop();
-        
-        if (sensor->isIdle()) {
-            Serial.printf("[Scheduler] Sensor %d finished\n", currentSensorIndex);
-            isSensorActive = false;
-            lastSensorRunTime = millis();
-            
-            // Move index for next time
-            currentSensorIndex++;
-            if (currentSensorIndex >= sensors.size()) {
-                currentSensorIndex = 0;
-            }
-        }
-    } else {
-        // Wait for interval
-        if (millis() - lastSensorRunTime > SENSOR_INTERVAL) {
-             if (!sensors.empty()) {
-                Serial.printf("[Scheduler] Starting Sensor %d\n", currentSensorIndex);
-                CTSensor* sensor = (CTSensor*)sensors[currentSensorIndex];
-                sensor->startReading();
-                isSensorActive = true;
-             }
-        }
-    }
+    for (auto& s : sensors) s->loop();
 }

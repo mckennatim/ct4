@@ -65,40 +65,30 @@ void setup() {
 // Round-Robin Scheduler State
 unsigned long lastSensorRunTime = 0;
 size_t currentSensorIndex = 0;
-bool isSensorActive = false;
-// Interval between completion of one sensor and start of next
+// Run one sensor every 3 seconds (giving 3s of pure MQTT time between blocks)
 const unsigned long SENSOR_INTERVAL = 3000; 
 
 void loop() {
     // 1. Always run MQTT (KeepAlive & Messages)
     mqtt.loop();
 
-    // 2. Scheduled Sensor Execution
-    if (isSensorActive) {
-        // Run the active state machine
-        CTSensor* sensor = (CTSensor*)sensors[currentSensorIndex]; // Safe cast for this project
-        sensor->loop();
-        
-        if (sensor->isIdle()) {
-            Serial.printf("[Scheduler] Sensor %d finished\n", currentSensorIndex);
-            isSensorActive = false;
-            lastSensorRunTime = millis();
+    // 2. Scheduled Sensor Execution (One at a time)
+    unsigned long now = millis();
+    if (now - lastSensorRunTime > SENSOR_INTERVAL) {
+        lastSensorRunTime = now;
+
+        if (!sensors.empty()) {
+            Serial.printf("[Scheduler] Running Sensor %d\n", currentSensorIndex);
             
-            // Move index for next time
+            // This call will block for ~1.2s (due to CT sampling)
+            // But since we only run ONE, the total block is 1.2s, not 4.8s.
+            sensors[currentSensorIndex]->loop();
+
+            // Move to next sensor for next slot
             currentSensorIndex++;
             if (currentSensorIndex >= sensors.size()) {
                 currentSensorIndex = 0;
             }
-        }
-    } else {
-        // Wait for interval
-        if (millis() - lastSensorRunTime > SENSOR_INTERVAL) {
-             if (!sensors.empty()) {
-                Serial.printf("[Scheduler] Starting Sensor %d\n", currentSensorIndex);
-                CTSensor* sensor = (CTSensor*)sensors[currentSensorIndex];
-                sensor->startReading();
-                isSensorActive = true;
-             }
         }
     }
 }

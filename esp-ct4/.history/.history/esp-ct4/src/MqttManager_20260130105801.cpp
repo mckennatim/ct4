@@ -35,6 +35,7 @@ void MqttManager::loop() {
             _lastReconnectAttempt = now;
             // Attempt to connect
             Serial.print("MqttManager: Attempting connection to ");
+            Serial.print(_client.getServerDomain()); // Or just generic msg
             Serial.print("...");
             
             if (_client.connect(_deviceId.c_str(), _user.c_str(), _password.c_str())) {

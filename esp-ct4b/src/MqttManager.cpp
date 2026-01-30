@@ -34,14 +34,8 @@ void MqttManager::loop() {
         if (now - _lastReconnectAttempt > _reconnectInterval) {
             _lastReconnectAttempt = now;
             // Attempt to connect
-            Serial.print("MqttManager: Attempting connection to ");
-            Serial.print("...");
-            
             if (_client.connect(_deviceId.c_str(), _user.c_str(), _password.c_str())) {
                 _onConnect();
-            } else {
-                Serial.print("failed, rc=");
-                Serial.println(_client.state());
             }
         }
     } else {
