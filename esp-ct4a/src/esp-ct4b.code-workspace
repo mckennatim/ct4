@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../esp-ct4b"
+		},
+		{
+			"name": "esp-ct4a",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
